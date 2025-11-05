@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%; /* ensure the flex container takes full viewport */
+  margin: 0;
+  padding: 0;
+  font-family: "Nobile", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+
+}
+
+body {
+  display: flex;
+  min-height: 100vh; /* ensure it fills the screen */
+}
+
+/* Sidebar */
+.sidebar {
+  width: 33%;
+  background-color: #3d5a80;
+  color: #f4f1de;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 20px;
+  min-height: 100vh;
+}
+
+.sidebar img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border: 3px solid #293241;
+}
+
+.sidebar h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.sidebar p {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.sidebar a {
+  color: #293241;
+  text-decoration: none;
+  font-size: 14px;
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Main Content */
+.main {
+  flex: 1;
+  background-color: #f4f1de;
+  padding: 40px 60px;
+  overflow-y: auto;
+  height: 100vh;
+  width: max-content;
+}
+
+section {
+  margin-bottom: 50px;
+}
+
+h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #ee6c4d;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.section-item {
+  margin-bottom: 15px;
+}
+
+.section-item h3 {
+  font-size: 20px;
+  color: #293241;
+  margin-bottom: 5px;
+}
+
+.section-item p,
+.section-item ul {
+  font-size: 14px;
+  color: #293241;
+  margin-left: 15px;
+}
+
+ul li {
+  margin-bottom: 5px;
+}
