@@ -120,14 +120,17 @@ body {
   flex: 1;
   /* background-color: var(--background-color); */
   padding: 40px 60px;
+  padding-left: 20px;
   overflow-y: auto;
   height: 100vh;
   width: max-content;
 }
 
 section {
-  margin-bottom: 20px;
+  margin: 20px 0px;
   padding: 15px;
+  padding-bottom: 5px;
+  padding-top: 20px;
   border-radius: 10px;
   transition: all 0.3s ease;
 }
@@ -149,11 +152,34 @@ section:target {
   margin-bottom: 20px;
 }
 
-section:hover {
+.item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin-bottom: 15px;
+}
+
+.item-header h3 {
+  font-size: 20px;
+  color: var(--highlight-color);
+  margin: 10px 0;
+  flex: 1;
+}
+
+.item-date {
+  color: var(--text-color);
+  font-size: 14px;
+  white-space: nowrap;
+  margin-left: 20px;
+}
+
+section:hover {
+  margin: 20px 0px;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(5px);
   padding: 20px;
+  padding-bottom: 5px;
+  padding-top: 25px;
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
@@ -164,11 +190,16 @@ section:hover {
   margin-bottom: 5px;
 }
 
-.section-item p,
+.section-item p {
+  font-size: 14px;
+  color: var(--text-color);
+  margin: 10px 0;
+}
+
 .section-item ul {
   font-size: 14px;
   color: var(--text-color);
-  margin: 20px 0;
+  margin: 0;
   margin-left: 15px;
 }
 
@@ -180,7 +211,7 @@ ul li {
   color: var(--highlight-color);
   margin-bottom: 20px;
   overflow: hidden;
-  width: 80%;
+  width: 100%;
 }
 
 .scrolling-container {
@@ -208,16 +239,12 @@ ul li {
 }
 
 .right-to-left {
-  animation: scrolling-left 20s linear infinite;
+  animation: scrolling-left 30s linear infinite;
 }
-
-/* .right-to-left:hover, .left-to-right:hover {
-  animation-play-state: paused;
-} */
 
 .left-to-right {
   transform: translate(-50%);
-  animation: scrolling-right 20s linear infinite;
+  animation: scrolling-right 30s linear infinite;
 }
 
 .skills-section-item li {
@@ -231,6 +258,7 @@ ul li {
   width: max-content;
   margin: 10px;
   transition: all 0.3s ease;
+  padding-top: 11px;
 }
 
 .skills-section-item li:hover {
@@ -241,4 +269,87 @@ ul li {
 .skills-section-item h3 {
   font-size: 20px;
   margin-bottom: 15px;
+}
+
+.project-item {
+  margin-bottom: 30px;
+  padding: 0;
+}
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.project-header h3 {
+  font-size: 20px;
+  color: var(--highlight-color);
+  margin-bottom: 0;
+  flex: 1;
+}
+
+.project-date {
+  color: var(--text-color);
+  font-size: 14px;
+  white-space: nowrap;
+  margin-left: 20px;
+}
+
+.project-content {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.project-image-wrapper {
+  position: relative;
+  width: 250px;
+  flex-shrink: 0;
+}
+
+.project-image {
+  width: 250px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  display: block;
+}
+
+.project-github-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+}
+
+.project-image-wrapper:hover .project-github-link {
+  opacity: 1;
+}
+
+.github-overlay {
+  width: 50px;
+  height: 50px;
+  transition: transform 0.3s ease;
+}
+
+.project-github-link:hover .github-overlay {
+  transform: scale(1.2);
+}
+
+.project-content p {
+  color: var(--text-color);
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0;
 }

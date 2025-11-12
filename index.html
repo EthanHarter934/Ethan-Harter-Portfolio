@@ -14,12 +14,11 @@
   </head>
   <body>
     <div class="sidebar">
-      <img src="Ethan Sunset Pic (1).jpg" alt="Ethan Harter" />
+      <img src="Images/Ethan Sunset Pic (1).jpg" alt="Ethan Harter" />
       <h1>Ethan Harter</h1>
       <p>Computer Science Student | AI Focus</p>
       <p>Oregon State University</p>
 
-      <!-- table of contents that get highlighted depending on scroll position -->
       <nav class="table-of-contents">
         <a href="#education">Education</a>
         <a href="#skills">Skills & Tools</a>
@@ -28,27 +27,27 @@
         <a href="#awards">Awards</a>
         <a href="#extracurriculars">Extracurriculars</a>
       </nav>
-      <!-- javascript -->
       <script>
         function scrollIntoViewWithOffset(selector, offset) {
           const element = document.querySelector(selector);
           var headerOffset = 45;
           var elementPosition = element.getBoundingClientRect().top;
-          var container = document.querySelector('.main');
-          var offsetPosition = elementPosition - headerOffset + container.scrollTop;
+          var container = document.querySelector(".main");
+          var offsetPosition =
+            elementPosition - headerOffset + container.scrollTop;
 
           container.scrollTo({
-              top: offsetPosition,
-              behavior: "smooth"
+            top: offsetPosition,
+            behavior: "smooth",
           });
         }
 
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-          anchor.addEventListener('click', function (e) {
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+          anchor.addEventListener("click", function (e) {
             e.preventDefault();
-            
+
             // Get the target element using the anchor's href
-            const targetId = this.getAttribute('href');
+            const targetId = this.getAttribute("href");
 
             // Scroll to that element with the offset
             scrollIntoViewWithOffset(targetId, 100);
@@ -58,16 +57,17 @@
 
       <div class="contact-bar">
         <a href="mailto:hartere@oregonstate.edu">
-          <img src="email-icon.png" alt="Email" />
+          <img src="Images/email-icon.png" alt="Email" />
         </a>
         <a href="https://linkedin.com/in/ethan-harter236" target="_blank">
-          <img src="linkedin-icon.png" alt="LinkedIn" />
+          <img src="Images/linkedin-icon.png" alt="LinkedIn" />
         </a>
         <a href="https://github.com/EthanHarter934" target="_blank">
-          <img src="github-icon.png" alt="GitHub" />
+          <img src="Images/github-icon.png" alt="GitHub" />
         </a>
-      </div>
-
+        <a href="CS_AI Resume.pdf" target="_blank">
+          <img src="Images/resume-icon.png" alt="Resume" />
+        </a>
       </div>
     </div>
 
@@ -75,10 +75,12 @@
       <section id="education">
         <h2>Education</h2>
         <div class="section-item">
-          <h3>Oregon State University</h3>
+          <div class="item-header">
+            <h3>Oregon State University</h3>
+            <span class="item-date">Expected June 2027</span>
+          </div>
           <p>
-            Bachelor's in Computer Science, focus in AI | GPA: 3.98 | Expected
-            June 2027
+            Bachelor's in Computer Science, focus in AI | GPA: 3.98
           </p>
           <p>
             Notable Classes: Operating Systems, Algorithms, Software
@@ -94,6 +96,15 @@
           <h3>Languages:</h3>
           <div class="scrolling-container">
             <ul class="right-to-left">
+              <li>Python</li>
+              <li>JavaScript</li>
+              <li>HTML/CSS</li>
+              <li>SQL</li>
+              <li>C++</li>
+              <li>C#</li>
+              <li>C</li>
+              <li>Assembly</li>
+              <li>R</li>
               <li>Python</li>
               <li>JavaScript</li>
               <li>HTML/CSS</li>
@@ -135,6 +146,14 @@
               <li>GitHub</li>
               <li>VSCode</li>
               <li>Unity</li>
+              <li>BERT</li>
+              <li>React</li>
+              <li>Node.js</li>
+              <li>Linux SSH Servers</li>
+              <li>MySQL</li>
+              <li>GitHub</li>
+              <li>VSCode</li>
+              <li>Unity</li>
             </ul>
           </div>
         </div>
@@ -143,99 +162,237 @@
       <section id="experience">
         <h2>Experience</h2>
         <div class="section-item">
-          <h3>Bonneville Power Administration - ASE Internship</h3>
-          <p>June 2021 - August 2021</p>
-          <ul>
-            <li>Redesigned 30+ animations for technical training materials</li>
-            <li>Worked with professionals to improve accuracy of animations</li>
-            <li>
-              Presented work at a symposium to teach interns development process
-            </li>
-          </ul>
+          <div class="item-header">
+            <h3>Bonneville Power Administration - ASE Internship</h3>
+            <span class="item-date">June 2021 - August 2021</span>
+          </div>
+          <p>
+            Redesigned <span style="color: #f4f1de; font-weight: bold">30+ animations</span> for technical training materials.
+            Worked with professionals to make animations more accurately display information.
+            Presented work for a symposium in order to <span style="color: #f4f1de; font-weight: bold">teach</span> other interns my development process.
+          </p>
         </div>
       </section>
 
       <section id="projects">
         <h2>Projects</h2>
 
-        <div class="section-item">
-          <h3>Social Media Stance Analysis | Python</h3>
-          <ul>
-            <li>
-              Collaborated with a team to analyze public opinion on gun control
-              using BERTweet
-            </li>
-            <li>Implemented topic modeling to group tweets by stance</li>
-            <li>Aiming to publish insights on Twitter discussions</li>
-          </ul>
+        <div class="project-item">
+          <div class="project-header">
+            <h3>Social Media Stance Analysis | Python</h3>
+            <span class="project-date">2025</span>
+          </div>
+          <div class="project-content">
+            <div class="project-image-wrapper">
+              <img
+                src="Images/Work In Progress.png"
+                alt="Social Media Stance Analysis"
+                class="project-image"
+              />
+              <a
+                href="https://github.com/EthanHarter934"
+                target="_blank"
+                class="project-github-link"
+              >
+                <img
+                  src="Images/github-icon.png"
+                  alt="GitHub"
+                  class="github-overlay"
+                />
+              </a>
+            </div>
+            <p>
+              Currently collaborating with a team to analyze public opinion on
+              gun control across Twitter posts using
+              <span style="color: #f4f1de; font-weight: bold">BERTweet</span>
+              . Implementing
+              <span style="color: #f4f1de; font-weight: bold">topic modeling</span>
+              with
+              <span style="color: #f4f1de; font-weight: bold">BERTweet</span> to
+              group tweets and identify the stances of opposing sides. Aiming to
+              publish a paper presenting insights on the discussion of gun
+              control on Twitter.
+            </p>
+          </div>
         </div>
 
-        <div class="section-item">
-          <h3>Twitter Sentiment Visualization | Python</h3>
-          <ul>
-            <li>Analyzed Twitter data from late 2024 using BERTopic</li>
-            <li>
-              Developed interactive visualizations to explore sentiment trends
-            </li>
-            <li>Built a web interface for filtering data by theme and topic</li>
-          </ul>
+        <div class="project-item">
+          <div class="project-header">
+            <h3>Twitter Sentiment Visualization | Python</h3>
+            <span class="project-date">2025</span>
+          </div>
+          <div class="project-content">
+            <div class="project-image-wrapper">
+              <img
+                src="Images/Work In Progress.png"
+                alt="Twitter Sentiment Visualization"
+                class="project-image"
+              />
+              <a
+                href="https://github.com/EthanHarter934"
+                target="_blank"
+                class="project-github-link"
+              >
+                <img
+                  src="Images/github-icon.png"
+                  alt="GitHub"
+                  class="github-overlay"
+                />
+              </a>
+            </div>
+            <p>
+              Currently analyzing Twitter data from late 2024 using
+              <span style="color: #f4f1de; font-weight: bold">BERTopic</span> to
+              visualize sentiment trends across major themes. Developing
+              interactive visualizations compare sentiment distribution and
+              intertopic distances. Building a web interface that allows users to
+              explore and filter through sentiment data by theme and topic.
+            </p>
+          </div>
         </div>
 
-        <div class="section-item">
-          <h3>Software Engineering Final Project | HTML, CSS, JavaScript</h3>
-          <ul>
-            <li>Built a recipe management website with React</li>
-            <li>
-              Developed three microservices for user authentication and data
-              storage
-            </li>
-            <li>Incorporated accessibility and usability heuristics</li>
-          </ul>
+        <div class="project-item">
+          <div class="project-header">
+            <h3>Software Engineering Final Project | HTML, CSS, JavaScript</h3>
+            <span class="project-date">2025</span>
+          </div>
+          <div class="project-content">
+            <div class="project-image-wrapper">
+              <img
+                src="Images/Recipedia.png"
+                alt="Software Engineering Project"
+                class="project-image"
+              />
+              <a
+                href="https://github.com/EthanHarter934/CS361-Main-Program"
+                target="_blank"
+                class="project-github-link"
+              >
+                <img
+                  src="Images/github-icon.png"
+                  alt="GitHub"
+                  class="github-overlay"
+                />
+              </a>
+            </div>
+            <p>
+              Built a recipe management website with
+              <span style="color: #f4f1de; font-weight: bold">React</span>,
+              using an
+              <span style="color: #f4f1de; font-weight: bold">Agile/Scrum</span>
+              framework. Developed and integrated three microservices to support
+              user authentication and storage for recipes and ingredients. Allows
+              users to manage recipes, while incorporating inclusivity
+              heuristics for accessibility and usability.
+            </p>
+          </div>
         </div>
 
-        <div class="section-item">
-          <h3>Data Structures Final Project | SQL, HTML, CSS, JavaScript</h3>
-          <ul>
-            <li>
-              Created website managing fictional game store sales using Node.js
-              and SQL
-            </li>
-            <li>
-              Implemented CRUD operations and improved usability based on
-              feedback
-            </li>
-          </ul>
+        <div class="project-item">
+          <div class="project-header">
+            <h3>Data Structures Final Project | SQL, HTML, CSS, JavaScript</h3>
+            <span class="project-date">2025</span>
+          </div>
+          <div class="project-content">
+            <div class="project-image-wrapper">
+              <img
+                src="Images/Punk Games.png"
+                alt="Data Structures Project"
+                class="project-image"
+              />
+              <a
+                href="https://github.com/EthanHarter934/CS340-Team79-Final-Project"
+                target="_blank"
+                class="project-github-link"
+              >
+                <img
+                  src="Images/github-icon.png"
+                  alt="GitHub"
+                  class="github-overlay"
+                />
+              </a>
+            </div>
+            <p>
+              Built a website using
+              <span style="color: #f4f1de; font-weight: bold">Node.js</span>
+              that manages the sales of a fictional physical game store using a
+              <span style="color: #f4f1de; font-weight: bold">SQL database</span>
+              . Implemented
+              <span style="color: #f4f1de; font-weight: bold">CRUD</span>
+              operations for each of the six entities which includes a
+              many-to-many relationship. Iteratively improved the project based
+              on peer feedback from classmates, improving usability and database
+              design.
+            </p>
+          </div>
         </div>
 
-        <div class="section-item">
-          <h3>Web Development Final Project | HTML, CSS, JavaScript</h3>
-          <ul>
-            <li>
-              Developed a multiplayer drawing game inspired by Telestrations
-              using Node.js and Socket.io
-            </li>
-            <li>
-              Project inducted into CS290 Hall of Fame for exceeding guidelines
-            </li>
-          </ul>
+        <div class="project-item">
+          <div class="project-header">
+            <h3>Web Development Final Project | HTML, CSS, JavaScript</h3>
+            <span class="project-date">2025</span>
+          </div>
+          <div class="project-content">
+            <div class="project-image-wrapper">
+              <img
+                src="Images/Depiction.png"
+                alt="Web Development Project"
+                class="project-image"
+              />
+              <a
+                href="https://github.com/osu-cs290-f24/final-project-the-dominators"
+                target="_blank"
+                class="project-github-link"
+              >
+                <img
+                  src="Images/github-icon.png"
+                  alt="GitHub"
+                  class="github-overlay"
+                />
+              </a>
+            </div>
+            <p>
+              Collaborated with a team of three to develop a multiplayer drawing
+              game with
+              <span style="color: #f4f1de; font-weight: bold">Node.js</span>
+              inspired by Telestrations. Enabled real-time gameplay with
+              <span style="color: #f4f1de; font-weight: bold">Socket.io</span>
+              for lobby creation and passing prompts and drawings. My team’s
+              project was inducted into the CS290 Hall of Fame for going above
+              and beyond project guidelines.
+            </p>
+          </div>
         </div>
       </section>
 
       <section id="awards">
         <h2>Awards</h2>
         <div class="section-item">
-          <h3>Finley Academic Excellence Scholarship</h3>
-          <p>September 2024 - Present</p>
+          <div class="item-header">
+            <h3>OSU Honor Roll</h3>
+            <span class="item-date">September 2023 - Present</span>
+          </div>
           <p>
-            Recognized for academic achievements in high school and freshman
-            year at OSU
+            Achieved Honor Roll status every term for maintaining a GPA of 3.5 or higher
+            throughout my time at OSU.
           </p>
 
-          <h3>Best Presentation</h3>
-          <p>December 2023</p>
+          <div class="item-header">
+            <h3>Finley Academic Excellence Scholarship</h3>
+            <span class="item-date">September 2023 - Present</span>
+          </div>
           <p>
-            Awarded in reverse engineering class for visual communication and
-            organization
+            I was awarded this scholarship for my academic achievements in my
+            time at OSU. This scholarship represents the rigor of coursework I
+            take to challenge myself and grow as an engineer.
+          </p>
+
+          <div class="item-header">
+            <h3>Best Presentation</h3>
+            <span class="item-date">December 2023</span>
+          </div>
+          <p>
+            I received this award in a reverse engineering class, which reflects my passion for visual communication and organization.
           </p>
         </div>
       </section>
@@ -243,12 +400,22 @@
       <section id="extracurriculars">
         <h2>Extracurriculars</h2>
         <div class="section-item">
-          <ul>
-            <li>OSU Artificial Intelligence Club (2025 - Present)</li>
-            <li>OSU Men's Volleyball Club Officer (2023 - Present)</li>
-            <li>Chaos Club Volleyball (2022 - 2023)</li>
-            <li>Grant High School Baseball (2019 - 2022)</li>
-          </ul>
+          <div class="item-header">
+            <h3>OSU Artificial Intelligence Club</h3>
+            <span class="item-date">2025 - Present</span>
+          </div>
+          <div class="item-header">
+            <h3>OSU Men's Volleyball Club Officer</h3>
+            <span class="item-date">2023 - Present</span>
+          </div>
+          <div class="item-header">
+            <h3>Chaos Club Volleyball</h3>
+            <span class="item-date">2022 - 2023</span>
+          </div>
+          <div class="item-header">
+            <h3>Grant High School Baseball</h3>
+            <span class="item-date">2019 - 2022</span>
+          </div>
         </div>
       </section>
     </div>
