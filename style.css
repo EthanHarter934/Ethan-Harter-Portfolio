@@ -121,12 +121,11 @@ body {
 /* Main Content */
 .main {
   flex: 1;
-  /* background-color: var(--background-color); */
   padding: 40px 60px;
   padding-left: 20px;
   overflow-y: auto;
-  height: 100vh;
-  width: max-content;
+  height: auto;
+  width: 100%;
 }
 
 section {
